@@ -1,6 +1,6 @@
 {
   "name": "vision6-jsonrpc-client",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "An API Client for the Vision6 JSON-RPC Api www.vision6.com.au",
   "main": "src/index.js",
   "scripts": {
@@ -17,10 +17,13 @@
     "email",
     "marketing"
   ],
-  "author": "Jamie Curnow",
+  "author": "Jamie Curnow <jc@jc21.com> (http://www.jc21.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jc21/nodejs-vision6-jsonrpc-client/issues"
   },
-  "homepage": "https://github.com/jc21/nodejs-vision6-jsonrpc-client#readme"
+  "homepage": "https://github.com/jc21/nodejs-vision6-jsonrpc-client#readme",
+  "dependencies": {
+    "jayson": "^2.0.2"
+  }
 }
