@@ -1,6 +1,6 @@
 {
   "name": "vision6-jsonrpc-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An API Client for the Vision6 JSON-RPC Api www.vision6.com.au",
   "main": "src/index.js",
   "scripts": {
