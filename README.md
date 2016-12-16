@@ -37,7 +37,7 @@ or you will get an exception.
 
 ### Wrapped Methods
 
-- `vision6.searchLists()`
+- `vision6.searchLists([criteria, limit, offset, sort_by, sort_order])`
 
 ### Unwrapped Methods
 

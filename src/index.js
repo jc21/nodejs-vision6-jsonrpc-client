@@ -16,12 +16,12 @@ module.exports = function (api_key, host) {
         throw new Error('Invalid Vision6 API Key');
     }
 
-    let protocol = 'http';
+    var protocol = 'http';
     if (host.substr(0, 5) === 'https') {
         protocol = 'https';
     }
 
-    let client = jayson.client[protocol](host);
+    var client = jayson.client[protocol](host);
 
     return {
 
@@ -38,7 +38,7 @@ module.exports = function (api_key, host) {
             debug('Calling ' + method_name, options);
 
             return client.request(method_name, options)
-                .then((results) => {
+                .then(function (results) {
                     debug(method_name, results);
 
                     if (typeof results.error !== 'undefined' && results.error) {
