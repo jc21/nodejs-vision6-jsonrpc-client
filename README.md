@@ -35,25 +35,47 @@ or you will get an exception.
 
 ## Methods
 
-### Wrapped Methods
+**List and Field Methods**
 
-- `vision6.searchLists([criteria, limit, offset, sort_by, sort_order])`
+- [`vision6.addField`](http://developers.vision6.com.au/3.0/method/addfield)
+- [`vision6.addList`](http://developers.vision6.com.au/3.0/method/addlist)
+- [`vision6.clearList`](http://developers.vision6.com.au/3.0/method/clearlist)
+- [`vision6.countFields`](http://developers.vision6.com.au/3.0/method/countfields)
+- [`vision6.countLists`](http://developers.vision6.com.au/3.0/method/countlists)
+- [`vision6.deleteField`](http://developers.vision6.com.au/3.0/method/deletefield)
+- [`vision6.deleteList`](http://developers.vision6.com.au/3.0/method/deletelist)
+- [`vision6.editField`](http://developers.vision6.com.au/3.0/method/editfield)
+- [`vision6.editList`](http://developers.vision6.com.au/3.0/method/editlist)
+- [`vision6.getFieldById`](http://developers.vision6.com.au/3.0/method/getfieldbyid)
+- [`vision6.getFolderIdForField`](http://developers.vision6.com.au/3.0/method/getfolderidforfield)
+- [`vision6.getListById`](http://developers.vision6.com.au/3.0/method/getlistbyid)
+- [`vision6.getTimezoneList`](http://developers.vision6.com.au/3.0/method/gettimezonelist)
+- [`vision6.searchFields`](http://developers.vision6.com.au/3.0/method/searchfields)
+- [`vision6.searchLists`](http://developers.vision6.com.au/3.0/method/searchlists)
+- [`vision6.setFieldFolderId`](http://developers.vision6.com.au/3.0/method/setfieldfolderid)
 
-### Unwrapped Methods
 
-At the time of writing there are very few wrapped API methods implemented
-in this package, however you can instantiate any API method by using `.call()`.
-Let's try the not yet wrapped API method, [getContactById](http://developer.vision6.com.au/3.0/method/getcontactbyid):
+**Contact Methods**
 
-```javascript
-var list_id    = 123;
-var contact_id = 456;
+- [`vision6.addContacts`](http://developers.vision6.com.au/3.0/method/addcontacts)
+- [`vision6.confirmContact`](http://developers.vision6.com.au/3.0/method/confirmcontact)
+- [`vision6.countContacts`](http://developers.vision6.com.au/3.0/method/countcontacts)
+- [`vision6.countPreviousUnsubscribers`](http://developers.vision6.com.au/3.0/method/countpreviousunsubscribers)
+- [`vision6.deactivateContact`](http://developers.vision6.com.au/3.0/method/deactivatecontact)
+- [`vision6.deleteContacts`](http://developers.vision6.com.au/3.0/method/deletecontacts)
+- [`vision6.editContacts`](http://developers.vision6.com.au/3.0/method/editcontacts)
+- [`vision6.getContactById`](http://developers.vision6.com.au/3.0/method/getcontactbyid)
+- [`vision6.reactivateContact`](http://developers.vision6.com.au/3.0/method/reactivatecontact)
+- [`vision6.resubscribeContact`](http://developers.vision6.com.au/3.0/method/resubscribecontact)
+- [`vision6.searchContacts`](http://developers.vision6.com.au/3.0/method/searchcontacts)
+- [`vision6.searchPreviousUnsubscribers`](http://developers.vision6.com.au/3.0/method/searchpreviousunsubscribers)
+- [`vision6.subscribeContact`](http://developers.vision6.com.au/3.0/method/subscribecontact)
+- [`vision6.unsubscribeContact`](http://developers.vision6.com.au/3.0/method/unsubscribecontact)
+- [`vision6.unsubscribeContactById`](http://developers.vision6.com.au/3.0/method/unsubscribecontactbyid)
 
-vision6.call('getContactById', [list_id, contact_id])
-    .then(function (contact) {
-        console.log(contact);
-    })
-    .catch(function (err) {
-        console.error('Ah crap:', err);
-    });
-```
+## Validation
+
+This package is jam packed with strictness. Using Json Schema Validation, all requests are validated locally before sending
+off to the API.
+
+Additionally, unit tests will validate responses from the API against expected schema.

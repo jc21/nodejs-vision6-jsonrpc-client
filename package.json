@@ -1,10 +1,10 @@
 {
   "name": "vision6-jsonrpc-client",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "An API Client for the Vision6 JSON-RPC Api www.vision6.com.au",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "DEBUG= istanbul cover _mocha"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,15 @@
   },
   "homepage": "https://github.com/jc21/nodejs-vision6-jsonrpc-client#readme",
   "dependencies": {
-    "jayson": "^2.0.2"
+    "ajv": "^5.2.0",
+    "jayson": "^2.0.2",
+    "json-schema-ref-parser": "^3.1.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "faker": "^3.1.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3",
+    "mocha-logger": "^1.0.5"
   }
 }

@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "id": "vision6/methods/searchFields",
+  "type": "object",
+  "requestSchema": {
+    "properties": {
+      "args": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 7,
+        "items": [
+          {
+            "$ref": "../definitions.json#/definitions/apikey"
+          },
+          {
+            "$ref": "../definitions.json#/definitions/id"
+          },
+          {
+            "$ref": "../definitions.json#/definitions/search_criteria"
+          },
+          {
+            "$ref": "../definitions.json#/definitions/limit"
+          },
+          {
+            "$ref": "../definitions.json#/definitions/offset"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "$ref": "../definitions.json#/definitions/sort_order"
+          }
+        ]
+      }
+    }
+  },
+  "responseSchema": {
+    "properties": {
+      "response": {
+        "type": "array"
+      }
+    }
+  }
+}

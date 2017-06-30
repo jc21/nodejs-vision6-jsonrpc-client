@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Vision6 JSON-RPC API",
+  "description": "Vision6 JSON-RPC API Schema",
+  "id": "vision6",
+  "version": "3.0",
+  "links": [
+    {
+      "href": "http://developers.vision6.com.au",
+      "rel": "self"
+    }
+  ],
+  "properties": {
+    "methods": {
+      "searchFields": {
+        "$ref": "./methods/searchFields.json"
+      },
+      "searchLists": {
+        "$ref": "./methods/searchLists.json"
+      },
+      "countContacts": {
+        "$ref": "./methods/countContacts.json"
+      },
+      "getTimezoneList": {
+        "$ref": "./methods/getTimezoneList.json"
+      }
+    }
+  }
+}

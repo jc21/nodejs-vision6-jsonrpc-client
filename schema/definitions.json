@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "id": "definitions",
+  "type": "object",
+  "definitions": {
+    "apikey": {
+      "description": "API Key",
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64
+    },
+    "id": {
+      "description": "Unique identifier",
+      "type": "integer",
+      "minimum": 0
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "search_criteria": {
+      "type": "array"
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "offset": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sort_order": {
+      "type": "string",
+      "enum": ["ASC", "DESC"]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "id": "vision6/methods/countContacts",
+  "type": "object",
+  "requestSchema": {
+    "properties": {
+      "args": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 3,
+        "items": [
+          {
+            "$ref": "../definitions.json#/definitions/apikey"
+          },
+          {
+            "$ref": "../definitions.json#/definitions/id"
+          },
+          {
+            "$ref": "../definitions.json#/definitions/search_criteria"
+          }
+        ]
+      }
+    }
+  },
+  "responseSchema": {
+    "properties": {
+      "response": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  }
+}
